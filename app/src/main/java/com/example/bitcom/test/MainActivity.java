@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         topBar.setOnRightClickListener(new TopBar.onRightClickListener() {
             @Override
             public void onRightClick() {
-                Toast.makeText(MainActivity.this,"右边",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"右侧按钮",Toast.LENGTH_SHORT).show();
             }
         });
     }
