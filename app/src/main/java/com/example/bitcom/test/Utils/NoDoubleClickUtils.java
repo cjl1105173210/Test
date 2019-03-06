@@ -11,6 +11,7 @@ public class NoDoubleClickUtils {
     }
 
     public synchronized static boolean isDoubleClick() {
+        Log.v("TAG","测试");
         long currentTime = System.currentTimeMillis();
         boolean isClick2;
         if (currentTime - lastClickTime >
@@ -20,7 +21,6 @@ public class NoDoubleClickUtils {
             isClick2 = true;
         }
         lastClickTime = currentTime;
-        Log.v("TAG","NoDoubleClickUtils  return");
         return isClick2;
     }
 }
