@@ -2,8 +2,10 @@ package com.example.bitcom.test;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.example.bitcom.test.Utils.NoDoubleClickUtils;
 import com.example.bitcom.test.View.TopBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
         topBar.setOnRightClickListener(new TopBar.onRightClickListener() {
             @Override
             public void onRightClick() {
+                if(NoDoubleClickUtils.isDoubleClick()){
+                    return;
+                }
+
+                Log.v("TAG","点击右侧按钮");
                 Toast.makeText(MainActivity.this,"右侧按钮",Toast.LENGTH_SHORT).show();
             }
         });
