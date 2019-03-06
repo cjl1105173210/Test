@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         topBar.setOnLeftClickListener(new TopBar.onLeftClickListener() {
             @Override
             public void onLeftClick() {
+                Log.v("TAG","点击左侧按钮");
                 Toast.makeText(MainActivity.this,"左边",Toast.LENGTH_SHORT).show();
             }
         });

@@ -1,5 +1,7 @@
 package com.example.bitcom.test.Utils;
 
+import android.util.Log;
+
 public class NoDoubleClickUtils {
     private static long lastClickTime;
     private final static int SPACE_TIME = 500;
@@ -18,6 +20,7 @@ public class NoDoubleClickUtils {
             isClick2 = true;
         }
         lastClickTime = currentTime;
+        Log.v("TAG","NoDoubleClickUtils  return");
         return isClick2;
     }
 }
